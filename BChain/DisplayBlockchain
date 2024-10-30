@@ -1,0 +1,10 @@
+from block import block
+from chain import Blockchain
+
+# Example: Add blocks and print the blockchain
+my_blockchain = Blockchain()
+my_blockchain.add_block("First Block Data")
+my_blockchain.add_block("Second Block Data")
+
+print("Blockchain:")
+my_blockchain.print_chain()
