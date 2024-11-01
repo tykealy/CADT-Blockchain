@@ -9,6 +9,7 @@ class User:
         self.name = name
         self.private_key = None
         self.public_key = None
+        self.stake = 0  # Initialize stake
         self._generate_rsa_key_pair()
 
     def sign_data(self, data):

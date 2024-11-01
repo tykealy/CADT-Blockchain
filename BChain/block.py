@@ -13,10 +13,11 @@ from cryptography.hazmat.primitives.asymmetric import padding
 
 
 class Block:
-    def __init__(self, block_number, data, previous_hash, user):
+    def __init__(self, block_number, data, previous_hash, user, validator):
         self.block_number = block_number
         self.data = data
         self.previous_hash = previous_hash
+        self.validator = validator
         self.hash = self.calculate_hash()
         self.signature = user.sign_data(self.hash)
         self.public_key_pem = user.get_public_key_pem()
